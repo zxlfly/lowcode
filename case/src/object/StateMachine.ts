@@ -42,7 +42,6 @@ export class StateMachine<
     fn(...date)
     this.state=next
     // 自动转换 处理不需要转换函数的情况
-    while(this.dispatch(0 as A,...date))
     while(this.dispatch("<auto>" as A,...date))
     return true
   }
